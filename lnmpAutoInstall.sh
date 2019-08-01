@@ -53,9 +53,7 @@ EOF
 
 systemctl restart nginx
 
-mysql -uroot -e "create user cwb@localhost identified by '123456';"
-mysql -uroot -e "create database lnmp;"
-mysql -uroot -e "grant all privileges on lnmp*. cwb@localhost;"
+mysql -uroot -e "grant all privileges on *.* to cwb@localhost identified by '123456';"
 
 cat <<-EOF >/usr/share/nginx/html/index.php
 <?php
