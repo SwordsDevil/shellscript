@@ -31,9 +31,8 @@ echo "export HISTSIZE=10000" >>/etc/profile
 echo "export HISTTIMEFORMAT=\"%Y-%m-%d-%H:%M:%S - \"" >>/etc/profile
 source /etc/profile
 
-chattr +ai /etc/passwd /etc/shadow /etc/group
 
-yum -y install vim bash-completion net-tools
+yum -y install vim bash-completion net-tools wget
 
 if [ $? -eq 0 ];then
 	exit 0
